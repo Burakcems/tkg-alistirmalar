@@ -33,10 +33,10 @@ Her `push` yaptığınızda GitHub Actions testleri sizin yerinize çalıştır�
    python -m pip install pytest
    python -m pytest -v
    ```
-3. **Her fonksiyonu bitirdiğinizde commit'leyip gönderin.**
+3. **Commit'leyip gönderin.**
    ```bash
    git add alistirma.py
-   git commit -m "isaret fonksiyonu yazıldı"
+   git commit -m "hafta02 alıştırması"
    git push
    ```
 4. **Sonucu görün.** Fork'unuzun **Actions** sekmesinde her hafta ayrı bir satırdır.
