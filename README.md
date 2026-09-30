@@ -46,16 +46,6 @@ Her `push` yaptığınızda GitHub Actions testleri sizin yerinize çalıştır�
 ## Kurallar
 
 - `test_alistirma.py` dosyalarını ve `.github/` klasörünü **değiştirmeyin**.
-  Testleri değiştirerek geçmek alıştırmanın amacını ortadan kaldırır.
-- Her hafta için o haftanın klasöründe en az **3 ayrı commit** yapın.
-  Tek seferde hepsini göndermek Git kontrolünü geçmez.
-
-## Her haftada kontrol edilenler
-
-| Adım | Ne bakıyor? |
-|---|---|
-| Python testleri | `alistirma.py` içindeki fonksiyonlar doğru çalışıyor mu? |
-| Git kontrolü | O haftanın klasöründe en az 3 commit yapılmış mı? |
 
 ## Sık karşılaşılan sorunlar
 
