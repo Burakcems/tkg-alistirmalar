@@ -1,0 +1,64 @@
+name: Alıştırma kontrolü
+
+on:
+  push:
+  workflow_dispatch:
+
+env:
+  EN_AZ_COMMIT: 3   # her hafta için öğrencinin yapması gereken en az commit sayısı
+
+jobs:
+  haftalari-bul:
+    # Hocanın reposunda çalışmasın; yalnızca öğrenci fork'larında çalışsın.
+    if: ${{ github.event.repository.fork }}
+    runs-on: ubuntu-latest
+    outputs:
+      haftalar: ${{ steps.bul.outputs.haftalar }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: bul
+        run: echo "haftalar=$(ls -d hafta*/ | tr -d / | jq -R . | jq -sc .)" >> "$GITHUB_OUTPUT"
+
+  kontrol:
+    needs: haftalari-bul
+    name: ${{ matrix.hafta }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false   # bir hafta kırmızıysa diğerleri yine çalışsın
+      matrix:
+        hafta: ${{ fromJson(needs.haftalari-bul.outputs.haftalar) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # tüm commit geçmişini indir
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: pytest kur
+        run: pip install pytest
+
+      - name: Python testleri
+        working-directory: ${{ matrix.hafta }}
+        run: python -m pytest -v
+
+      - name: Git kontrolü (en az ${{ env.EN_AZ_COMMIT }} commit)
+        if: ${{ !cancelled() }}   # testler kırmızı olsa da commit sayısını göster
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HAFTA: ${{ matrix.hafta }}
+        run: |
+          # Hocanın reposunu indir; oradaki commit'ler öğrenciye sayılmaz.
+          ana_repo=$(gh api "repos/$GITHUB_REPOSITORY" --jq .parent.clone_url)
+          ana_dal=$(gh api "repos/$GITHUB_REPOSITORY" --jq .parent.default_branch)
+          git fetch --quiet "$ana_repo" "$ana_dal"
+
+          # Öğrencinin bu haftanın klasörüne yaptığı commit'ler (Sync fork birleştirmeleri hariç)
+          sayi=$(git rev-list --count --no-merges HEAD ^FETCH_HEAD -- "$HAFTA/")
+          echo "$HAFTA klasöründeki commit sayınız: $sayi"
+          git log --oneline --no-merges HEAD ^FETCH_HEAD -- "$HAFTA/"
+          if [ "$sayi" -lt "$EN_AZ_COMMIT" ]; then
+            echo "::error::$HAFTA için en az $EN_AZ_COMMIT commit yapmalısınız (şu an $sayi). Her fonksiyonu bitirdiğinizde ayrı commit'leyin."
+            exit 1
+          fi
