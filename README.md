@@ -8,7 +8,8 @@ Her `push` yaptığınızda GitHub Actions testleri sizin yerinize çalıştır�
 |---|---|---|
 | [hafta02](hafta02/) | Python temelleri: fonksiyonları siz yazın | `alistirma.py` |
 | [hafta03](hafta03/) | pytest: testleri siz yazın | `test_alistirma.py` |
-| [hafta04](hafta04/) | Kapsam ve parametrize: testleri siz yazın | `test_alistirma.py` |
+| [hafta04](hafta04/) | Lab: Python ve test karma alıştırma | `bolum1.py`, `test_bolum2.py` |
+| [hafta05](hafta05/) | Kapsam ve parametrize: testleri siz yazın | `test_alistirma.py` |
 
 ## Dönem başında bir kez
 

@@ -1,4 +1,4 @@
-# Alıştırma 3: Bu dosyadaki kod DOĞRU çalışıyor. Bu dosyayı DEĞİŞTİRMEYİN.
+# Alıştırma 4: Bu dosyadaki kod DOĞRU çalışıyor. Bu dosyayı DEĞİŞTİRMEYİN.
 #
 # Sizin işiniz bu fonksiyonların testlerini test_alistirma.py dosyasına yazmak.
 # Her fonksiyonun üstündeki açıklama, fonksiyonun ne yapması gerektiğini (şartnameyi) anlatıyor.

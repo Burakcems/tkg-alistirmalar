@@ -1,4 +1,4 @@
-# Alıştırma 3: Testleri bu dosyaya SİZ yazacaksınız.
+# Alıştırma 4: Testleri bu dosyaya SİZ yazacaksınız.
 #
 # Aşağıda örnek olarak bir test var. Yanına kendi testlerinizi ekleyin.
 # Çalıştırmak için bu klasörde:  python -m pytest -v
