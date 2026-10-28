@@ -1,0 +1,15 @@
+C:\Users\Cem\tkg-alistirmalar\hafta05\baglı_liste\bin\Debug\net10.0\baglı_liste.exe
+C:\Users\Cem\tkg-alistirmalar\hafta05\baglı_liste\bin\Debug\net10.0\baglı_liste.deps.json
+C:\Users\Cem\tkg-alistirmalar\hafta05\baglı_liste\bin\Debug\net10.0\baglı_liste.runtimeconfig.json
+C:\Users\Cem\tkg-alistirmalar\hafta05\baglı_liste\bin\Debug\net10.0\baglı_liste.dll
+C:\Users\Cem\tkg-alistirmalar\hafta05\baglı_liste\bin\Debug\net10.0\baglı_liste.pdb
+C:\Users\Cem\tkg-alistirmalar\hafta05\baglı_liste\obj\Debug\net10.0\baglı_liste.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cem\tkg-alistirmalar\hafta05\baglı_liste\obj\Debug\net10.0\baglı_liste.AssemblyInfoInputs.cache
+C:\Users\Cem\tkg-alistirmalar\hafta05\baglı_liste\obj\Debug\net10.0\baglı_liste.AssemblyInfo.cs
+C:\Users\Cem\tkg-alistirmalar\hafta05\baglı_liste\obj\Debug\net10.0\baglı_liste.csproj.CoreCompileInputs.cache
+C:\Users\Cem\tkg-alistirmalar\hafta05\baglı_liste\obj\Debug\net10.0\baglı_liste.sourcelink.json
+C:\Users\Cem\tkg-alistirmalar\hafta05\baglı_liste\obj\Debug\net10.0\baglı_liste.dll
+C:\Users\Cem\tkg-alistirmalar\hafta05\baglı_liste\obj\Debug\net10.0\refint\baglı_liste.dll
+C:\Users\Cem\tkg-alistirmalar\hafta05\baglı_liste\obj\Debug\net10.0\baglı_liste.pdb
+C:\Users\Cem\tkg-alistirmalar\hafta05\baglı_liste\obj\Debug\net10.0\baglı_liste.genruntimeconfig.cache
+C:\Users\Cem\tkg-alistirmalar\hafta05\baglı_liste\obj\Debug\net10.0\ref\baglı_liste.dll
